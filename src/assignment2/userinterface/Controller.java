@@ -65,7 +65,7 @@ public class Controller implements Initializable{
             NieuweTreinMessage.setText("Voer text in");
         }
     }
-
+// test
     public void NieuwScherm() throws IOException {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml2.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
