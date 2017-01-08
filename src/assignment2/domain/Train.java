@@ -59,4 +59,7 @@ public class Train {
 
         return w;
     }
+    public String toString(){
+        return name.toString();
+    }
 }

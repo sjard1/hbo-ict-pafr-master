@@ -55,11 +55,11 @@ public class Controller implements Initializable{
 
 
     public void NieuweTrein() {
-        String y = NieuweTreinNaam.getText();
+        String y = NieuweTreinNaam.getText().toString();
         if(!y.isEmpty())
         {
         Train trein = new Train(y);
-        NieuweTreinMessage.setText("Nieuwe trein succesvol aangemaakt: \n " + y);
+        NieuweTreinMessage.setText("Nieuwe trein succesvol aangemaakt: \n " + trein.toString());
         }else{
             NieuweTreinMessage.setText("Voer text in");
         }
