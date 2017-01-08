@@ -18,7 +18,7 @@ public class Train {
 
     public Train(String name) {
         this.name = name;
-        System.out.print(name + " trein aangemaakt");
+        System.out.print(name + " trein aangemaakt \n");
     }
 
     public String getName() {

@@ -1,5 +1,8 @@
 package assignment2.domain;
 
+import javafx.beans.binding.ObjectExpression;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 
 /**
@@ -11,11 +14,23 @@ import java.util.ArrayList;
  */
 
 public class RailCompany implements CommandHandler {
-    public  static ArrayList<Train> trains = new ArrayList<Train>();
+    // worden de waardes wel goed opgeslagen? Ik denk dat ze namelijk puur in de arraylist worden opgeslagen en niet langs de classes komen
+    private  static ArrayList<Train> trains = new ArrayList<Train>();
     public  static ArrayList<Wagon> wagons = new ArrayList<Wagon>();
 
     private Logger log = Logger.getInstance();
 
+    public static ArrayList<Train> getTrains(){
+        return trains;
+    }
+
+    public ObservableList<String> getTrainNames(){
+        ObservableList<String> names = null;
+        for(Train t : trains){
+            names.add(t.getName());
+        }
+        return names;
+    }
     private Train containsTrain(String id) {
         Train t = null;
         for (Train train : trains) {
@@ -25,7 +40,7 @@ public class RailCompany implements CommandHandler {
             }
         }
 
-        if (trains.size() > 0 || t == null) {
+        if (t == null) {
             log.notice("The train with ID " + id + " was not found.");
         }
 
@@ -41,7 +56,7 @@ public class RailCompany implements CommandHandler {
             }
         }
 
-        if (wagons.size() > 0 || w == null) {
+        if (w == null) {
             log.notice("The wagon with ID " + id + " was not found.");
         }
 

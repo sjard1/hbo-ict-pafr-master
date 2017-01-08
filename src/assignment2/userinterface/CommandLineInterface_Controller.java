@@ -24,9 +24,10 @@ public class CommandLineInterface_Controller {
     @FXML
     TextArea CommandLine;
 
+    // de output van deze command moet in stukken gebroken worden en kan worden gebruikt voor het loggen van commands en het laten zien wat een command doet
     public void Command(){
         {
-            System.out.print("Command methode doet het");
+            System.out.print("Command methode doet het \n"); // check of de methode tot hier komt
 //            String x = CommandText.getText();
             ANTLRInputStream input = new ANTLRInputStream(CommandLine.getText());
             RichRailLexer lex = new RichRailLexer(input);
