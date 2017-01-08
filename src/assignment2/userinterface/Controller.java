@@ -17,7 +17,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 
 import java.io.IOException;
 import java.net.URL;
@@ -67,7 +66,7 @@ public class Controller implements Initializable{
     }
 // test
     public void NieuwScherm() throws IOException {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml2.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CommandLineInterface.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));

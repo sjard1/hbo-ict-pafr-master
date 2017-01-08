@@ -20,19 +20,25 @@ import javafx.stage.Stage;
  */
 
 // Deze klas is de controller van de fxml file: fxml2
-public class fxml2_Controller {
+public class CommandLineInterface_Controller {
     @FXML
     TextArea CommandLine;
 
     public void Command(){
         {
-            System.out.print("hij doet het");
+            System.out.print("Command methode doet het");
 //            String x = CommandText.getText();
             ANTLRInputStream input = new ANTLRInputStream(CommandLine.getText());
             RichRailLexer lex = new RichRailLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lex);
             RichRailParser parser = new RichRailParser(tokens);
             parser.command();
+//            System.out.println(
+//                    "\nparser.command(): " + parser.command() +
+//                            "\nparser: " + parser.toString() +
+//                            "\ntokens " + tokens.toString() +
+//                            "\n lex " + lex.toString()
+//            );
         }
     }
     public void ButtonIsClicked(ActionEvent actionEvent) {

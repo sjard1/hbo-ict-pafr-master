@@ -33,15 +33,17 @@ Button button = new Button();
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("RichRail");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 800, 400));
         primaryStage.show();
     }
     {
+        // deze code word bij het runnen meteen gebruikt, deze moet weg voor de eind versie
         ANTLRInputStream input = new ANTLRInputStream("new wagon w3");
         RichRailLexer lex = new RichRailLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lex);
         RichRailParser parser = new RichRailParser(tokens);
         parser.command();
+
     }
 }
   //  @Override

@@ -11,8 +11,8 @@ import java.util.ArrayList;
  */
 
 public class RailCompany implements CommandHandler {
-    private ArrayList<Train> trains = new ArrayList<Train>();
-    private ArrayList<Wagon> wagons = new ArrayList<Wagon>();
+    public  static ArrayList<Train> trains = new ArrayList<Train>();
+    public  static ArrayList<Wagon> wagons = new ArrayList<Wagon>();
 
     private Logger log = Logger.getInstance();
 

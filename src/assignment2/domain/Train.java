@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class Train {
     private String name;
-    private ArrayList<Wagon> wagons = new ArrayList<Wagon>();
+    public static ArrayList<Wagon> wagons = new ArrayList<Wagon>();
 
     private Logger log = Logger.getInstance();
 
